@@ -61,21 +61,20 @@ class SearchApp1(ChangeCategoryCase):
         self.assertFalse(exists(nav_app_selected), 'app')
         self.assertFalse(exists(nav_game_selected), 'game')
 
-        # self.poco(text="精品").click()
-        # nav_select_selected = Template(self.R('res/img/changeCategory/nav_select_selected.png'), rgb=True)
+        self.poco(text="精品").click()
+        nav_select_selected = Template(self.R('res/img/changeCategory/nav_select_selected.png'), rgb=True)
         # nav_select_unselected = Template(self.R('res/img/changeCategory/nav_select_unselected.png'), rgb=True)
-        # self.assertTrue(exists(nav_select_selected), 'jingpin')
-        #
-        # self.poco(text="应用").click()
-        # nav_app_selected = Template(self.R('res/img/changeCategory/nav_app_selected.png'), rgb=True)
-        # nav_app_unselected = Template(self.R('res/img/changeCategory/nav_app_unselected.png'), rgb=True)
-        # self.assertTrue(exists(nav_app_selected), 'yingyong')
-        #
-        # self.poco(text="游戏").click()
-        # nav_game_selected = Template(self.R('res/img/changeCategory/nav_game_selected.png'), rgb=True)
-        # nav_game_unselected = Template(self.R('res/img/changeCategory/nav_game_unselected.png'), rgb=True)
-        # self.assertTrue(exists(nav_game_selected), 'youxi')
+        self.assertTrue(exists(nav_select_selected), 'jingpin')
 
+        self.poco(text="应用").click()
+        nav_app_selected = Template(self.R('res/img/changeCategory/nav_app_selected.png'), rgb=True)
+        # nav_app_unselected = Template(self.R('res/img/changeCategory/nav_app_unselected.png'), rgb=True)
+        self.assertTrue(exists(nav_app_selected), 'yingyong')
+
+        self.poco(text="游戏").click()
+        nav_game_selected = Template(self.R('res/img/changeCategory/nav_game_selected.png'), rgb=True)
+        # nav_game_unselected = Template(self.R('res/img/changeCategory/nav_game_unselected.png'), rgb=True)
+        self.assertTrue(exists(nav_game_selected), 'youxi')
 
 
 if __name__ == '__main__':
