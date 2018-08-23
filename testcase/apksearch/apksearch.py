@@ -50,8 +50,9 @@ class SearchApp1(APKSearchCase):
         self.poco(text="天天斗地主（真人版）").click()
         time.sleep(1)
         result = self.poco('android.widget.TextView').get_text()
-        self.assertEqual(result, '天天斗地主（真人版）', '打开天天斗地主（真人版）详情页')
 
+        self.assertEqual(result, '天天222斗地主（真人版）', '打开天天斗地主（真人版）详情页')
+        print ("test")
 
 class SearchApp2(APKSearchCase):
     def runTest(self):
